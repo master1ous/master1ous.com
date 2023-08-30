@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0-beta1/css/all.css">
+    <title>master1ous</title>
+</head>
+<body>
+    <br>
+    <div class="container">
+        <section class="content">
+            <h1>Welcome to <span style="color: #ffffffb7;">master1ous.com</span> <img src="https://cdn.discordapp.com/avatars/693553429380857978/1251e54c290309dca7cbedbb65a3f39a.png?size=4096" alt="Avatar" style="width: 30px; height: 30px; border-radius: 50%; margin-bottom: -5px; background-color: #ffffff00;"></h1>
+            <div title="line" style="width: 100%; height: 2px; background-color: #ffffff88;"></div>
+            <p style="color: #ffffffc0">Hello, thanks for visiting my portfolio. I am a Discord Bot Developer, Software Developer, and a learning Website Developer!
+            I code custom bots, and websites, for a cheap price, and quick delivery. I hope to improve the market of discord bot development.</p>
+            <br>
+            <button class="button" onclick="window.location.href='https://discord.com/users/693553429380857978'">Contact Me <i class="fas fa-long-arrow-alt-right"></i></button>
+        </section>
+        <br><br>
+        <section class="cards">
+            <div class="card">
+                <img src="https://cdn.discordapp.com/attachments/1130542500952686663/1146569178959052922/image.png" alt="Watcher_Bot">
+                <span style="display: flex; justify-content: space-between; align-items: center;">
+                <p style="color: #ffffffc0">watcherbot.me</p> <button style="outline: none; border: none; color: #ffffffc0; font-size: 20px; cursor: pointer; background: transparent;" onclick="redirectPopup('https://watcherbot.me/')"><i class="fas fa-external-link-alt"></i></button>
+                </span>
+            </div>
+
+            <div class="card">
+                <img src="https://cdn.discordapp.com/attachments/1130542500952686663/1146571633717420062/image.png" alt="Aprex_Bot">
+                <span style="display: flex; justify-content: space-between; align-items: center;">
+                <p style="color: #ffffffc0">aprex</p> <button style="outline: none; border: none; color: #ffffffc0; font-size: 20px; cursor: pointer; background: transparent;" onclick="redirectPopup('https://discord.com/api/oauth2/authorize?client_id=1096194520032485579&permissions=8&scope=bot%20applications.commands')"><i class="fas fa-external-link-alt"></i></button>
+                </span>
+            </div>
+        </section>
+        <br><br>
+        <footer>
+            <div title="line" style="width: 100%; height: 1px; background-color: #9191915b;"></div>
+            <span style="display: flex; justify-content: space-between; align-items: center;">
+                <p style="color: #ffffffc0">© 2023 Azury Industries</p>
+                <div>
+                    <a href="https://github.com/azuryindustry" target="_blank" style="color: #ffffffc0"><i class="fab fa-github"></i></a>
+                    <a href="https://twitter.com/azuryindustry" target="_blank" style="color: #ffffffc0"><i class="fab fa-twitter"></i></a>
+                    <a href="https://discord.gg/azury" target="_blank" style="color: #ffffffc0"><i class="fab fa-discord"></i></a>
+                    &nbsp;
+                    <span style="color: #ffffffc0; font-size: 15px;background: #3f3f3fa8; border-radius: 20px;padding: 5px; border: 1px solid #3f3f3f">v1.0.0</span>
+                </div>
+            </span>
+        </footer>
+
+        <div class="redirect-popup" id="redirectPopup" style="display: none;"></div>
+    </div>
+</body>
+
+<script>
+    function redirectPopup(url) {
+        document.getElementById("redirectPopup").style.display = "block";
+        document.getElementById("redirectPopup").innerHTML = `
+        <div class="content">
+        <h1 style="color: #ffffff;"><i class="fas fa-exclamation-triangle" style="color: #ffffff;"></i> Redirect Warning</h1>
+        <h3 style="background-color: #5252526e; border-radius: 5px; padding: 5px; font-size: 20px; width: 100%;text-wrap: wrap;">${url.length > 50 ? url.substring(0, 50) + "..." : url}</h3>
+        <p style="color: #ffffffc0;">You are about to be redirected to an external website. Are you sure you want to continue?</p>
+        <br><br>
+        <span style="display: flex; justify-content: space-between; align-items: center;">
+        <button class="redirect" onclick="window.location.href='${url}'">Continue <i class="fas fa-long-arrow-alt-right"></i></button>
+        <button class="redirect" onclick="document.getElementById('redirectPopup').style.display = 'none';">Cancel <i class="fas fa-times"></i></button>
+        </span>
+        </div>
+        `
+        document.getElementById("redirectPopup").style.animation = "popup 0.5s ease-in-out";
+    }
+</script>
+</html>
