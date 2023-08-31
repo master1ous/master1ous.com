@@ -219,23 +219,5 @@ footer {
         &::-webkit-scrollbar {
             display: none;
         }
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 20px;
-            height: 100%;
-            background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1));
-        }
-        &::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 20px;
-            height: 100%;
-            background: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,1));
-        }
     }
 }
