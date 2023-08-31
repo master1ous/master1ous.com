@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0-beta1/css/all.css">
     <title>master1ous</title>
-</head> 
+</head>
 <body>
     <br>
     <div class="container">
@@ -23,14 +23,14 @@
             <div class="card">
                 <img src="https://cdn.discordapp.com/attachments/1130542500952686663/1146569178959052922/image.png" alt="Watcher_Bot">
                 <span style="display: flex; justify-content: space-between; align-items: center;">
-                <p style="color: #ffffffc0">watcherbot.me</p> <button style="outline: none; border: none; color: #ffffffc0; font-size: 20px; cursor: pointer; background: transparent;" onclick="redirectPopup('https://watcherbot.me/')"><i class="fas fa-external-link-alt"></i></button>
+                <p style="color: #ffffffc0">watcherbot.me</p> <a href="https://watcherbot.me" target="_blank" style="outline: none; border: none; color: #ffffffc0; font-size: 20px; cursor: pointer; background: transparent;"><i class="fas fa-external-link-alt"></i></a>
                 </span>
             </div>
 
             <div class="card">
                 <img src="https://cdn.discordapp.com/attachments/1130542500952686663/1146571633717420062/image.png" alt="Aprex_Bot">
                 <span style="display: flex; justify-content: space-between; align-items: center;">
-                <p style="color: #ffffffc0">aprex</p> <button style="outline: none; border: none; color: #ffffffc0; font-size: 20px; cursor: pointer; background: transparent;" onclick="redirectPopup('https://discord.com/api/oauth2/authorize?client_id=1096194520032485579&permissions=8&scope=bot%20applications.commands')"><i class="fas fa-external-link-alt"></i></button>
+                <p style="color: #ffffffc0">aprex</p> <a href="https://discord.com/api/oauth2/authorize?client_id=1096194520032485579&permissions=8&scope=bot%20applications.commands" target="_blank" style="outline: none; border: none; color: #ffffffc0; font-size: 20px; cursor: pointer; background: transparent;"><i class="fas fa-external-link-alt"></i></a>
                 </span>
             </div>
         </section>
@@ -49,26 +49,6 @@
             </span>
         </footer>
 
-        <div class="redirect-popup" id="redirectPopup" style="display: none;"></div>
     </div>
 </body>
-
-<script>
-    function redirectPopup(url) {
-        document.getElementById("redirectPopup").style.display = "block";
-        document.getElementById("redirectPopup").innerHTML = `
-        <div class="content">
-        <h1 style="color: #ffffff;"><i class="fas fa-exclamation-triangle" style="color: #ffffff;"></i> Redirect Warning</h1>
-        <h3 style="background-color: #5252526e; border-radius: 5px; padding: 5px; font-size: 20px; width: 100%;text-wrap: wrap;">${url.length > 50 ? url.substring(0, 50) + "..." : url}</h3>
-        <p style="color: #ffffffc0;">You are about to be redirected to an external website. Are you sure you want to continue?</p>
-        <br><br>
-        <span style="display: flex; justify-content: space-between; align-items: center;">
-        <button class="redirect" onclick="window.location.href='${url}'">Continue <i class="fas fa-long-arrow-alt-right"></i></button>
-        <button class="redirect" onclick="document.getElementById('redirectPopup').style.display = 'none';">Cancel <i class="fas fa-times"></i></button>
-        </span>
-        </div>
-        `
-        document.getElementById("redirectPopup").style.animation = "popup 0.5s ease-in-out";
-    }
-</script>
 </html>
