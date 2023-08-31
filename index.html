@@ -26,6 +26,46 @@
             I code custom bots, and websites, for a cheap price, and quick delivery. I hope to improve the market of discord bot development.</p>
             <br>
             <button class="button" onclick="window.location.href='https://discord.com/users/693553429380857978'">Contact Me <i class="fas fa-long-arrow-alt-right"></i></button>
+            <button style="margin-left: 10px;outline: none; border: none; background: transparent; color: #ffffffc0; font-size: 20px; cursor: pointer;" onclick="expandProfile()"><i class="fas fa-chevron-down"></i></button>
+
+            <div id="expandedProfile" style="display: none;">
+                <br><br>
+                 <section class="langs">
+                    <div style="display: flex; align-items: center;background: #3f3f3fa8; border-radius: 20px;padding: 5px; padding-left: 10px; padding-right: 10px; border: 1px solid #3f3f3f; margin: 5px;">
+                        <p style="color: #ffffffc0"><i class="fab fa-js fa-1x"></i>&nbsp;JavaScript</p>
+                    </div>
+                    <div style="display: flex; align-items: center;background: #3f3f3fa8; border-radius: 20px;padding: 5px; padding-left: 10px; padding-right: 10px; border: 1px solid #3f3f3f; margin: 5px;">
+                        <p style="color: #ffffffc0"><i class="fab fa-html5 fa-1x"></i>&nbsp;HTML</p>
+                    </div>
+                    <div style="display: flex; align-items: center;background: #3f3f3fa8; border-radius: 20px;padding: 5px; padding-left: 10px; padding-right: 10px; border: 1px solid #3f3f3f; margin: 5px;">
+                        <p style="color: #ffffffc0"><i class="fab fa-css3-alt fa-1x"></i>&nbsp;CSS</p>
+                    </div>
+                    <div style="display: flex; align-items: center;background: #3f3f3fa8; border-radius: 20px;padding: 5px; padding-left: 10px; padding-right: 10px; border: 1px solid #3f3f3f; margin: 5px;">
+                        <p style="color: #ffffffc0"><i class="fab fa-codepen fa-1x"></i>&nbsp;TypeScript</p>
+                    </div>
+                    <div style="display: flex; align-items: center;background: #3f3f3fa8; border-radius: 20px;padding: 5px; padding-left: 10px; padding-right: 10px; border: 1px solid #3f3f3f; margin: 5px;">
+                        <p style="color: #ffffffc0"><i class="fab fa-node-js fa-1x"></i>&nbsp;Node.js</p>
+                    </div>
+                    <!--react.js-->
+                    <div style="display: flex; align-items: center;background: #3f3f3fa8; border-radius: 20px;padding: 5px; padding-left: 10px; padding-right: 10px; border: 1px solid #3f3f3f; margin: 5px;">
+                        <p style="color: #ffffffc0"><i class="fab fa-react fa-1x"></i>&nbsp;React.js</p>
+                    </div>
+                    <!--next.js-->
+                    <div style="display: flex; align-items: center;background: #3f3f3fa8; border-radius: 20px;padding: 5px; padding-left: 10px; padding-right: 10px; border: 1px solid #3f3f3f; margin: 5px;">
+                        <p style="color: #ffffffc0"><i class="fab fa-react fa-1x"></i>&nbsp;Next.js</p>
+                    </div>
+                    <!--discord.js-->
+                    <div style="display: flex; align-items: center;background: #3f3f3fa8; border-radius: 20px;padding: 5px; padding-left: 10px; padding-right: 10px; border: 1px solid #3f3f3f; margin: 5px;">
+                        <p style="color: #ffffffc0"><i class="fab fa-discord fa-1x"></i>&nbsp;Discord.js</p>
+                    </div>
+                    <!--tailwindcss-->
+                    <div style="display: flex; align-items: center;background: #3f3f3fa8; border-radius: 20px;padding: 5px; padding-left: 10px; padding-right: 10px; border: 1px solid #3f3f3f; margin: 5px;">
+                        <p style="color: #ffffffc0"><i class="fas fa-feather-alt fa-1x"></i>&nbsp;TailwindCSS</p>
+                    </div>
+                 </section>
+                <br>
+
+            </div>
         </section>
         <br><br>
         <section class="cards">
@@ -68,4 +108,31 @@
 
     </div>
 </body>
+
+<script>
+    function expandProfile() {
+        var x = document.getElementById("expandedProfile");
+        if (x.style.display === "none") {
+            x.animate([
+                { transform: 'translateY(-10px)' },
+                { transform: 'translateY(0px)' }
+            ], {
+                duration: 100,
+                iterations: 1
+            });
+            x.style.display = "block";
+        } else {
+            x.animate([
+                { transform: 'translateY(0px)' },
+                { transform: 'translateY(-10px)' }
+            ], {
+                duration: 100,
+                iterations: 1
+            });
+            x.style.display = "none";
+        }
+    }
+</script>
+
+
 </html>
