@@ -219,5 +219,6 @@ footer {
         &::-webkit-scrollbar {
             display: none;
         }
+        margin-left: -20px;
     }
 }
