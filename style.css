@@ -212,7 +212,6 @@ footer {
         overflow-y: hidden;
         white-space: nowrap;
         flex-direction: row;
-        justify-content: center;
         flex-wrap: nowrap;
         -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;  /* Firefox */
