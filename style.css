@@ -89,7 +89,7 @@ footer {
 
 @media (max-width: 768px) {
     .button {
-        width: 100%;
+        width: 80%;
     }
 }
 
@@ -199,3 +199,43 @@ footer {
     visibility: visible;
     opacity: 1;
   }
+  
+.langs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* when on mobile, all components in the langs row, will use a horizontal scroll */
+@media (max-width: 768px) {
+    .langs {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: nowrap;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 100%;
+            background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1));
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 20px;
+            height: 100%;
+            background: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,1));
+        }
+    }
+}
