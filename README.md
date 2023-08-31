@@ -6,8 +6,7 @@
 This is a simplistic, modern portfolio website that I created to showcase my projects and skills. It is built with HTML, CSS, and JavaScript. It is hosted on Vercel.
 <br><br>
 [![Website](https://img.shields.io/website?label=master1ous.com&style=for-the-badge&url=https%3A%2F%2Fmaster1ous.com)](https://master1ous.com)
-[![GitHub last commit](https://img.shields.io/github/last-commit/master1ous/master1ous.com?style=for-the-badge)](https://github.com/AzuryIndustry/master1ous.com/commits/master)
-[![GitHub](https://img.shields.io/github/license/master1ous/master1ous.com?style=for-the-badge)](https://github.com/AzuryIndustry/master1ous.com/blob/master/LICENSE)
+[![GitHub last commit](https://img.shields.io/github/last-commit/AzuryIndustry/master1ous.com?style=for-the-badge)](https://github.com/AzuryIndustry/master1ous.com/commits/master)
 
 ## Credits
 - [Font Awesome](https://fontawesome.com/)
