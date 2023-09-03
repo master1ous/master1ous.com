@@ -17,8 +17,23 @@
 
 </head>
 <body>
+
+    <script>
+        // if the user scrolls about 50px down, show the navbar
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                document.getElementsByClassName("navbar")[0].style.display = "block";
+            } else {
+                document.getElementsByClassName("navbar")[0].style.display = "none";
+            }
+        }
+    </script>
     <br>
     <div class="container">
+        <div class="navbar" style="display: none;">
+            <h3>Welcome to <span style="color: #ffffffb7;">master1ous.com</span> <img src="https://cdn.discordapp.com/avatars/693553429380857978/1251e54c290309dca7cbedbb65a3f39a.png?size=4096" alt="Avatar" style="width: 30px; height: 30px; border-radius: 50%; margin-bottom: -5px; background-color: #ffffff00;"></h3>
+        </div>
         <section class="content" style="cursor: default;">
             <h1>Welcome to <span style="color: #ffffffb7;">master1ous.com</span> <img src="https://cdn.discordapp.com/avatars/693553429380857978/1251e54c290309dca7cbedbb65a3f39a.png?size=4096" alt="Avatar" style="width: 30px; height: 30px; border-radius: 50%; margin-bottom: -5px; background-color: #ffffff00;"></h1>
             <div title="line" style="width: 100%; height: 2px; background-color: #ffffff88;"></div>
