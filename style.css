@@ -302,3 +302,115 @@ footer {
         width: 100%;
     }
 }
+
+
+.banner2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(45deg, #005eac00, #005eac, #005eac);
+    background-size: 400% 400%;
+    width: 100%;
+    height: 80px;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100%;
+    transition: 1s;
+}
+
+.banner2 h1 {
+    font-size: 28px;
+    text-align: left;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.banner2 p {
+    font-size: 16px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    width: 80%;
+}
+
+.banner2 .btn {
+    margin-left: 20px;
+    margin-top: 20px;
+    height: 50px;
+    border-radius: 20px;
+    border: 3px solid #a6c5ffb9;
+    background: #a6c5ff;
+    color: rgb(29, 29, 29);
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: 0.3s;
+    animation: leave 0.4s forwards;
+}
+
+.banner2 .btn:hover {
+    animation: hover 0.4s forwards;
+}
+
+
+@keyframes hover {
+    from {
+        box-shadow: inset 0 0 0 0.01px #02d85b;
+    }
+    to {
+        box-shadow: inset 8.79928em 0 0 0.01px #02d85b;
+        border: 1px solid #02d85b;
+    }
+}
+
+@keyframes leave {
+    from {
+        box-shadow: inset -8.79928em 0 0 0.01px #02d85b;
+        border: 1px solid #02d85b;
+    }
+    to {
+        box-shadow: inset 0 0 0 0.01px #02d85b;
+    }
+}
+
+/* When a user clicks on the button, show a animated pulse going across the button */
+.banner2 .btn:active {
+    animation: pulse 1s;
+    background: #02d85b;
+    border: 1px solid #02d85b;
+}
+
+@media (max-width: 768px) {
+    .banner2 {
+        flex-direction: column;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    .banner2 h1 {
+        font-size: 20px;
+    }
+
+    .banner2 p {
+        font-size: 14px;
+    }
+
+    .banner2 .button {
+        margin-left: 0px;
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+
+.timestamp:hover {
+    animation: pulse 1s;
+    background: #608aff;
+    box-shadow: 0px 0px 10px 0px #608affb2;
+    transition: 1s;
+    border-radius: 5px;
+    padding: 2px 1px;
+}
+
