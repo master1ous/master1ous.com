@@ -16,10 +16,12 @@ body {
 }
 
 .content {
-    background: rgba(77, 77, 77, 0.247);
+    background: linear-gradient(20deg, #005eac, rgba(0, 54, 99, 0.588), #005eac);
+    background-size: 400% 400%;
     padding: 20px;
     border-radius: 20px;
-    border: 2px solid #5252526e;
+    transition: 1s;
+    box-shadow: inset 0px 0px 8px 0pxrgba(0, 0, 0, 0.336)8;
 }
 
 .cards {
@@ -37,16 +39,17 @@ body {
 .card {
     width: 48%;
     margin-bottom: 20px;
-    background: rgba(77, 77, 77, 0.247);
+    background: rgba(47, 106, 182, 0.63);
     border-radius: 20px;
     padding: 20px;
     box-sizing: border-box;
-    border: 2px solid #5252526e;
     transition: 0.3s;
+    padding-bottom: 0px;
+    box-shadow: inset 0px 0px 10px 0px #00000088;
 }
 
 .card:hover {
-    border: 2px solid #0d4dff;
+    background: rgba(37, 132, 255, 0.8);
     transition: 1s;
 }
 
@@ -77,7 +80,7 @@ footer {
 .button {
     background: transparent;
     background: #5a84f83a;
-    border: 2px solid #2b63ff !important;
+    border: 2px solid #608aff !important;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -94,63 +97,9 @@ footer {
 }
 
 .button:hover {
-    background: #5a84f850;
-    box-shadow: 0px 0px 10px 0px #0d4eff50;
+    background: #608aff;
+    box-shadow: 0px 0px 10px 0px #608affb2;
     transition: 1s;
-}
-
-.redirect {    
-    background: #424242;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: 0.3s;
-}
-
-.redirect-popup {
-    background: #000000d7;
-    backdrop-filter: blur(5px);
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.3s;
-}
-
-.redirect-popup .content {
-    width: 30%;
-    height: 40%;
-    background: #222222;
-    border-radius: 20px;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 3px solid #5252526e;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    left: 50%;
-    bottom: 50%;
-    top: 50%;
-    margin: 0 auto;
-    margin-left: 50%;
-    margin-top: 20%;
-}
-
-@media (max-width: 768px) {
-    .redirect-popup .content {
-        width: 100%;
-        height: 50%;
-        margin-top: 60%;
-    }
 }
 
 /* Tooltip container */
@@ -163,12 +112,12 @@ footer {
   .tooltip .tooltiptext {
     visibility: hidden;
     width: 120px;
-    background-color: #1b1b1bab;
-    backdrop-filter: blur(5px);
-    color: #fff;
+    background-color: #fffffff8;
+    color: #000000;
     text-align: center;
     padding: 5px 0;
-    border-radius: 6px;
+    border-radius: 30px;
+    font-family: 'Open Sans', sans-serif;
   
     /* Position the tooltip text */
     position: absolute;
@@ -180,6 +129,7 @@ footer {
     /* Fade in tooltip */
     opacity: 0;
     transition: opacity 0.3s;
+    scale: 0.9;
   }
   
   /* Tooltip arrow */
@@ -191,13 +141,15 @@ footer {
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: #1b1b1bab transparent transparent transparent;
+    border-color: #fafafaf8 transparent transparent transparent;
   }
   
   /* Show the tooltip text when you mouse over the tooltip container */
   .tooltip:hover .tooltiptext {
+
     visibility: visible;
     opacity: 1;
+    transform: scale(1.1);
   }
   
 .langs {
@@ -226,13 +178,127 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: #5252526e;
-    backdrop-filter: blur(5px);
+    background: #0000006e;
+    backdrop-filter: blur(10px);
     align-items: center;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    height: 55px;
+    height: 80px;
     border-bottom: 1px solid #5252526e;
+}
+
+@media (min-width: 768px) {
+    .navbar {
+        width: 50%;
+        margin: 0 auto;
+        border-radius: 20px;
+        left: 25%;
+    }
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(45deg, #005eac, #005eac00, #005eac);
+    background-size: 400% 400%;
+    width: 100%;
+    height: 80px;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.banner h1 {
+    font-size: 28px;
+    text-align: left;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.banner p {
+    font-size: 16px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    width: 80%;
+}
+
+.banner .btn {
+    margin-left: 20px;
+    margin-top: 20px;
+    height: 50px;
+    border-radius: 20px;
+    border: 3px solid #a6c5ffb9;
+    background: #a6c5ff;
+    color: rgb(29, 29, 29);
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+
+.banner .btn:hover {
+    animation: pulse 1s;
+    background: #92b8ff;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.banner:hover {
+    background: #005eac;
+    background: linear-gradient(45deg, #005eac, #005eac00, #005eac);
+    background-size: 400% 400%;
+    animation: gradient 2s ease-in-out 1s forwards;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .banner {
+        flex-direction: column;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    .banner h1 {
+        font-size: 20px;
+    }
+
+    .banner p {
+        font-size: 14px;
+    }
+
+    .banner .button {
+        margin-left: 0px;
+        margin-top: 10px;
+        width: 100%;
+    }
 }
