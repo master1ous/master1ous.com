@@ -508,3 +508,52 @@ footer {
   .menu > li > a > i {
     padding-right: 10px;
   }
+
+.share-popup {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    /* postion in the bottom center of the screen */
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 20%;
+    z-index: 999;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 0px #00000088;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #ffffff6e;
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgb(64 64 64 / 5%);
+    box-shadow: inset 0px 0px 1px 0px #00000088;
+    color: #000000;
+    flex-direction: column;
+}
+
+.share-popup .share-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 20px;
+    box-sizing: border-box;
+    transition: 0.3s;
+    margin: 10px 0px;
+    font-size: 36px;
+    padding: 10px 20px;
+}
+
+@media (max-width: 768px) {
+    .share-popup {
+        width: 90%;
+    }
+    .share-popup .share-links {
+        font-size: 30px;
+    }
+}
