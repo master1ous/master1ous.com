@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0-beta1/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0-beta1/css/v4-shims.css">
     <title>master1ous</title>
     <link rel="icon" href="https://cdn.discordapp.com/avatars/693553429380857978/1251e54c290309dca7cbedbb65a3f39a.png?size=4096">
 
@@ -138,6 +139,17 @@
             </span>
         </footer>
 
+        <div id="contextMenu" class="context-menu" style="display: none"> 
+            <ul class="menu"> 
+                <li class="share" id="contx_share"><a href="#"><i class="fa fa-share" aria-hidden="true"></i> Share</a></li> 
+                <li class="link" id="contx_link"><a href="#"><i class="fa fa-link" aria-hidden="true"></i> Copy Link Address</a></li> 
+                <li class="copy" id="contx_copy"><a href="#"><i class="fa fa-print" aria-hidden="true"></i> Print Page</a></li>
+                &nbsp;
+                <div title="line" style="width: 100%; height: 1px; background-color: #9191916e;"></div>
+                &nbsp;
+                <li class="source" id="contx_source"><a href="#"><i class="fa fa-code" aria-hidden="true"></i> View Source</a></li>
+            </ul> 
+        </div> 
     </div>
 </body>
 
@@ -166,6 +178,7 @@
     }
 
     // when someone clicks on the dropdown, toggle between hiding and showing the dropdown content
+    
     function dropdown() {
         if (document.getElementsByClassName("dropdown-content")[0].style.display === "none") {
             document.getElementsByClassName("dropdown-content")[0].style.display = "flex";
@@ -208,6 +221,66 @@
             });
         }
     }
+
+    document.onclick = hideMenu; 
+       document.oncontextmenu = rightClick; 
+
+        function hideMenu() { 
+            document.getElementById("contextMenu") 
+                    .style.display = "none" 
+        } 
+
+        function rightClick(e) { 
+            e.preventDefault(); 
+
+            if (document.getElementById("contextMenu") .style.display == "block"){ 
+                hideMenu(); 
+            }else{ 
+                var menu = document.getElementById("contextMenu")      
+                
+                menu.style.display = 'block'; 
+                if (e.pageX > window.innerWidth - 200) {
+                    menu.style.left = window.innerWidth - 200 + "px"; 
+                } else {
+                    menu.style.left = e.pageX + "px"; 
+                }
+                menu.style.left = e.pageX + "px"; 
+                menu.style.top = e.pageY + "px"; 
+            } 
+        } 
+
+        // when a user clicks on a context menu item
+        document.getElementById("contx_share").onclick = sharePageUTM;
+        document.getElementById("contx_link").onclick = copyLink;
+        document.getElementById("contx_copy").onclick = printPage;
+        document.getElementById("contx_source").onclick = viewSource;
+
+        // function to share the page with UTM
+        function sharePageUTM() {
+            var url = window.location.href;
+            var utm = "?utm_source=master1ous.com&utm_medium=website&utm_campaign=master1ous.com";
+            var shareUrl = url + utm;
+            // add to clipboard
+            navigator.clipboard.writeText(shareUrl);
+        }
+
+        // function to copy the link
+        function copyLink() {
+            var url = window.location.href;
+            // add to clipboard
+            navigator.clipboard.writeText(url);
+        }
+
+        // function to print the page
+        function printPage() {
+            window.print();
+        }
+
+        // function to view the source code
+        function viewSource() {
+            window.location.href = "https://github.com/AzuryIndustry/master1ous.com";
+        }
+
 </script>
 
 
