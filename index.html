@@ -239,13 +239,13 @@
                 var menu = document.getElementById("contextMenu")      
                 
                 menu.style.display = 'block'; 
-                if (e.pageX > window.innerWidth - 200) {
-                    menu.style.left = window.innerWidth - 200 + "px"; 
+                if (e.pageX >= window.innerWidth - 300) {
+                    // stop it just before the edge
+                    menu.style.left = (window.innerWidth - 300) + "px";
                 } else {
-                    menu.style.left = e.pageX + "px"; 
-                }
                 menu.style.left = e.pageX + "px"; 
                 menu.style.top = e.pageY + "px"; 
+                }
             } 
         } 
 
