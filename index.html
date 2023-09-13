@@ -33,6 +33,16 @@
     <div class="container">
         <div class="navbar" style="display: none;">
             <h3>Welcome to <br><span style="color: #ffffffb7;">master1ous.com</span> <img src="https://cdn.discordapp.com/avatars/693553429380857978/1251e54c290309dca7cbedbb65a3f39a.png?size=4096" alt="Avatar" style="width: 30px; height: 30px; border-radius: 50%; margin-bottom: -5px; background-color: #ffffff00;"></h3>
+
+            <button class="dropdown_hover" style="float: right; margin-right: 50px; cursor: pointer; margin-top: -70px; color: #ffffffc0; font-size: 50px;" onclick="dropdown()">
+                <i class="fa fa-chevron-down"></i>
+            </button>
+            <div class="dropdown-content" style="float: right; margin-right: 50px; display: none;">
+                <div class="links">
+                    <a class="link" href="https://dsc.gg/azuryindustry" target="_blank" style="color: #ffffffc0"><i class="fab fa-discord"></i>&nbsp;Discord Server</a>
+                    <a class="link" href="https://azury.cc/" target="_blank" style="color: #ffffffc0"><i class="fas fa-globe"></i>&nbsp;Website</a>
+                </div>
+            </div>
         </div>
         <section class="content" style="cursor: default;">
             <h1>Welcome to <span style="color: #ffffffb7;">master1ous.com</span> <img src="https://cdn.discordapp.com/avatars/693553429380857978/1251e54c290309dca7cbedbb65a3f39a.png?size=4096" alt="Avatar" style="width: 30px; height: 30px; border-radius: 50%; margin-bottom: -5px; background-color: #ffffff00;"></h1>
@@ -103,11 +113,6 @@
                 </span>
             </div>
         </section>
-        <section class="banner">
-            <h1>Need a portfolio of your own?</h1>
-            <p style="color: #ffffffc0">I am a learning Web Developer, Bot Developer, and Software Developer. I can make you a custom website, bot, or software for a cheap price, and quick delivery.</p>
-            <button class="btn" onclick="window.location.href='https://discord.gg/azury'">Visit my Discord Server <i class="fab fa-discord"></i></button>
-        </section>
         <br><br>
         <section class="banner2">
             <h1>Expert Bot Developer <i class="fas fa-feather-alt"></i></h1>
@@ -115,7 +120,7 @@
             <br>&nbsp; <i class="fad fa-arrow-right"></i> I am the founder of <b>Watcher</b>, a Discord Bot which allows you to create customized Server-Metric-Bots for your server. Tracking messages, invites, giveaways, and more!
             <br>&nbsp; <i class="fad fa-arrow-right"></i> I am the founder of <b>Aprex</b>, a multifunctional Discord Bot, all <u>completely free</u> with no subscriptions at all. Aprex can help manage your server.</p>
 
-            <button class="btn" onclick="window.location.href='https://discord.com/users/693553429380857978'">Commission me <i class="fas fa-dollar-sign"></i></button>
+            <button class="btn" onclick="window.location.href='https://discord.com/users/693553429380857978'">Commission me <i class="fas fa-email"></i></button>
         </section>
         <br><br>
         <br><br>
@@ -128,7 +133,7 @@
                     <a href="https://twitter.com/azuryindustry" target="_blank" style="color: #ffffffc0"><i class="fab fa-twitter"></i></a>
                     <a href="https://discord.gg/azury" target="_blank" style="color: #ffffffc0"><i class="fab fa-discord"></i></a>
                     &nbsp;
-                    <span style="color: #000; font-size: 15px;background: #64b4ffd7; border-radius: 20px;padding: 5px; cursor: pointer;box-shadow: inset 0px 0px 10px 0px #00000088;">v2.0.0</span>
+                    <span style="color: #000; font-size: 15px;background: #64b4ffd7; border-radius: 20px;padding: 5px; cursor: pointer;box-shadow: inset 0px 0px 10px 0px #00000088;">v2.1.0</span>
                 </div>
             </span>
         </footer>
@@ -157,6 +162,50 @@
                 iterations: 1
             });
             x.style.display = "none";
+        }
+    }
+
+    // when someone clicks on the dropdown, toggle between hiding and showing the dropdown content
+    function dropdown() {
+        if (document.getElementsByClassName("dropdown-content")[0].style.display === "none") {
+            document.getElementsByClassName("dropdown-content")[0].style.display = "flex";
+
+            document.getElementsByClassName("dropdown_hover")[0].animate([
+                { transform: 'rotate(0deg)' },
+                { transform: 'rotate(90deg)' }
+            ], {
+                duration: 100,
+                iterations: 1,
+            });
+            document.getElementsByClassName("dropdown_hover")[0].style.transform = "rotate(90deg)";
+
+            document.getElementsByClassName("dropdown-content")[0].animate([
+                { transform: 'scale(0)' },
+                { transform: 'scale(1.1)' },
+                { transform: 'scale(1)' }
+            ], {
+                duration: 100,
+                iterations: 1
+            });
+        } else {
+            document.getElementsByClassName("dropdown-content")[0].style.display = "none";
+
+            document.getElementsByClassName("dropdown_hover")[0].animate([
+                { transform: 'rotate(90deg)' },
+                { transform: 'rotate(0deg)' }
+            ], {
+                duration: 100,
+                iterations: 1
+            });
+            document.getElementsByClassName("dropdown_hover")[0].style.transform = "rotate(0deg)";
+
+            document.getElementsByClassName("dropdown-content")[0].animate([
+                { transform: 'scale(1)' },
+                { transform: 'scale(0)' }
+            ], {
+                duration: 100,
+                iterations: 1
+            });
         }
     }
 </script>
